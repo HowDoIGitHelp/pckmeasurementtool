@@ -1,4 +1,4 @@
-﻿#Research questions and hypotheses
+﻿#Research questions
 Because of these gaps in knowledge we aim to answer these questions:
  
 - ***Can the SCS1 test be repurposed into a PCK test?***
