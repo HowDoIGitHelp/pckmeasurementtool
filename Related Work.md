@@ -1,13 +1,4 @@
-﻿#Introduction
-## The Problems
-### We don't know how CS teachers teach
-Despite the demand for high quality educators in Computer Science almost nothing is known about how our teacher's teach programming.
-The teaching strategies and practices that CS teachers use are not thoroughly studied.
-Because of this, the knowledge that Computer Science teachers use in order to teach CS concepts remains a mystery.
-This is not surprising due to the fact that Computer Science Education is young compared to other scientific fields like Physics, Biology and Chemistry.
-Because Computer Science Education is a relatively young field, there is no benchmark on how good CS teachers teach Computer Science or how effective current practices are (help bad sentence).
- 
-### Measuring PCK is difficult
+﻿## Measuring PCK is difficult
 One of the trending fields in in science education research right now is about teacher knowledge. 
 One of the domains of teacher knowledge is the construct of teacher's pedagogical content knowledge (PCK).
 PCK is a construct introduced by the Social Science researcher Lee Shulman in the 1890's (need exact).
@@ -17,21 +8,20 @@ Measuring a teacher's PCK directly is difficult, it is challenging to document s
 This is bigger problem on young research fields like Computer Science Education. 
 Because of all of this, Computer Science Education research falls behind other fields in terms of an understanding of teacher's PCK [@Yadav2016 ].
  
-## Why we need to solve these problems
-### PCK is an empirical evidence for good teaching practices
-Currently there are no widely accepted standards of teaching in Computer Science Education  [@Rohaan2009 ]
+## PCK is an empirical evidence for good teaching practices
+Currently there are no widely accepted standards of teaching in Computer Science Education  [@Rohaan2009].
 This affects Computer Science teachers' personal standards of teaching. 
 When CS teachers' decide to switch between preferred teaching techniques and practices they base their choice on anecdotal evidences, informal judgement, and intuition [@Fossati2011 ].
 Measuring PCK for introductory CS teachers will allow us to compare teaching practices using empirical evidence. 
-Instead of simply relying on intuition teachers can compare different teaching practices using empirical measures like PCK.
+This is important because, empirical evidence is needed so that the community can use research to answer questions on how to teach programming [@Pears2007].
  
-### PCK measures identify difficult to teach topics
+## PCK measures identify difficult to teach topics
 Measuring mean PCK of teachers for each topic will give us insights on which topics are harder to teach. 
 Topics in which teachers generally have lower levels of PCK can help identify topics in which teachers have trouble teaching.
 By combining knowledge of hard to teach topics to our existing knowledge of topics CS students have trouble learning [@Goldman2008] we can verify if these two sets of topics are similar to each other.
 Knowing this will provide evidence to the hypothesis that poor performances of CS students are caused by poor teaching practices of CS teachers.
  
-### Good measures develop good teachers
+## Good measures develop good teachers
 There is demand for high quality CS teachers in the world right now. 
 This makes the need for effective teacher training imminent.
 To create frameworks of improvement - focused teacher evaluation system, measurements for effective teaching is needed [@METProject2013].
@@ -87,19 +77,21 @@ It could be argued that the motivation for teaching learners is not the process 
 Recent papers on Conceptual Change theory suggest that this theory provides a bridging gap in researches of student errors and instructional practice. Duit and Treagust (2003) discuss the possible use of conceptual change process to examine scientific literacy to provide a framework for science education and teaching [-@Duit2003].
  
 ## State of the Art
-### Capturing the elusive PCK qualitatively
+### Measuring PCK qualitatively
 Loughran et. al's (2001) early works in representing PCK was through Pedagogical and Professional - experience Repertoirs (PaP-eRs) [@Loughran2001;@Loughran2012]. 
 This method involves documenting on paper teacher's practices, anecdotes and insights on a topic.
 Although teachers PaP-eRs of a topic is not a complete representation of PCK it is a useful tool for sharing PCK in practice.
 Loughran et. al (200?) later expanded the documentation of PCK by adding the tool Context Representations (CoRe) which details their overview of concepts related to the topic [@Loughran2012].
+ 
 Based on Loughran et. al's (2012) CoRe's deBeer's (2009) study compiled a list of *Big Ideas* specifically for introductory computer science education [-@Loughran2012;-@DeBeer2009].
 The Big Ideas were produced using semi-structured group discussions of computer science teachers.
 Each of these Big Ideas have corresponding questions that assess a teachers' content knowledge, teaching strategies, and other pedagogical insights in said topic.
+ 
 One of the most recent studies also use open ended questions for measuring PCK [@Yadav2016].
 Yadav et al. (2016) used open-ended questionnaires that present common Computer Science situations that teachers may encounter. 
 Although this test doesn't yield quantitative data, the teacher's responses generate rich qualitative data sets.
  
-### Capturing the elusive PCK quantitatively
+### Measuring PCK quantitatively
 Some studies used multiple choice approaches for easily quantifiable measurements of PCK.
 Although not exactly for PCK, one of the earliest test questionnaires to measure PCK was from Kromney and Renfrow's C-P items [-@Kromrey1991 ]. 
 This study built multiple choice questions to measure content-specific pedagogical knowledge [@Kromrey1991].
@@ -111,12 +103,14 @@ New studies on quantitative PCK measurements have focused on teacher's understan
 Juttner and Neuhaus (2010) created PCK questions based on empirically analysed student errors to be used for a PCK test for biology teachers [@Juttner2010].  
 The process for creating these test questions start with the gathering of the most common student misconceptions using a multiple-choice test for students.
 Questions for teachers are then created based on the common misconceptions gathered.
+ 
 A similar process is also used by researchers from other fields.
 A study on the influence of teacher knowledge on middle school classrooms show that the teachers who could identify popular misconceptions had much larger classroom gains compared to teachers who only knew the answer. 
 In addition to that, Sadler's (2013) research concluded that a multiple choice assessment instrument could be used to assess the SMK (subject matter knowledge) and KOSM (knowledge on student misconception) of teachers [@Sadler2013]. 
 While Sadler's study doesn't explicitly discuss the concept of PCK itself, several conceptual studies discussed above  show that the KOSM of students that Sadler identified are manifestations of PCK [@Park2008 ;@Shulman1986]. 
 This study, like Juttner and Neuhaus' (2010) study constructed test questions and answers which are grounded by empirical evidence.
-Although, Juttner and Neuhaus' (2009) study unlike Sadler et. al's (2013) study, focuses on the source of student misconceptions more than the validity of the constructed PCK test [@Juttner2010;@Sadler2013 ].
+Although, Juttner and Neuhaus' (2009) study unlike Sadler et. al's (2013) study, focuses on the source of student misconceptions more than the validity of the constructed PCK test [@Juttner2010;@Sadler2013].
+ 
 On the field of Computer Science Education, some studies are also starting to consider misconceptions in PCK.
 Ohrndorf and Schubert (2013) created some test items to be used to assess student teacher’s PCK. The test items created in this study are based on three measurable aspects of PCK: PCK test, PCK student, and PCK instruction. 
 PCK student test items are questions on student’s misconceptions and PCK instructions are questions on how to create instructions for solving misconceptions [@Ohrndorf2013].
@@ -141,73 +135,3 @@ Measuring the mean PCK of teachers around the world for each topic will reveal t
 These topics will reveal insights on hard to teach concepts.
 This set of topics is important to find since the intersection between the set of hard to teach topics and the set of hard to learn topics will be provide evidence that CS students cant learn because CS teachers cant teach.
  
-#Research questions and hypotheses
-Because of these gaps in knowledge we aim to answer these questions:
- 
-- ***Can the SCS1 test be repurposed into a PCK test***?
- 
-It has been shown in a previous study that a validated multiple choice tests for middle school students can be used to calculate teacher's knowledge on student misconceptions [@Sadler2013 ].
-The SCS1 is proven to be a usable PCK tool if we find positive correlation between student gains and PCK tool test.
- 
-- ***How does CS teachers’ PCK relate to students’ learning?***
- 
-Using the tool derived from SCS1 we will be able to measure the relationship between CS teachers PCK and student learning gains.
-The same tool can also be used to measure the following PCK related knowledge bases.
- 
-- *How does CS teachers’ content knowledge score relate to students’ learning?*
- 
-- *How does CS teachers’ ability to identify misconceptions relate to students’ learning?*
- 
-These specific research questions are asked so that we can measure how these knowledge bases relate to each other and also which of them matter the most.
- 
-- ***Which introductory programming concepts are hard to teach? ***
- 
-The tool can be used to measure the average PCK of teachers for each item in the repurposed SCS1 test.
-Test items in which teachers generally score low PCK can provide insight on which introductory computer science topics are hard to teach.
- 
-# Methodology
-##Research Method
-It is much harder to measure each aspect of teacher competency to control the independent variable. 
-Therefore the study cannot measure causal relationships. 
-Also it is unethical to deliberately subject the students to incompetent teachers.
-According to Cohen et. al. (2007) the type of research most suitable is *ex post facto research* under a co-relational design [-@Cohen2007].
-*Ex post facto* research method is used if the researchers are unable to conduct a controlled experiment.
-Instead of meticulously controlling and manipulating every variable before conducting the experiment, *ex post facto* research only requires data collection and data analysis to test the hypothesis.
-A co-relational design of *ex post facto* research is the research design used when the researchers cannot collect data for all variables.
-This design cannot test causal relationships but can prove correlation relationships.
- 
-##Data Collection
-To measure student learning a validated introductory CS test will be used.
-The students will take pre-tests and post-tests to measure the improvement in scores.
-At the early part of the semester x CS2 classes will take the SCS1 exam as a pre test.
-To generate the pck test, each test question in the SCS1 exam will be converted to a pck test question that would let the teacher identify from the SCS1 choices which are the most common misconceptions. 
-An SCS1 post test will be administered towards the end of the semester and the improvement of scores from the post test will be measured.
- 
-##Analysis
-There are two available student test data after the pre test. One is from the pre-tests administered on the students teached by the teachers taking the PCK tests and another data available is from SCS1 pre tests taken by CS1 students from around the world. 
-Because of the possibility that these two groups of data will show different frequencies of common misconceptions, teachers' answers will be marked based on the two groups of student test data. 
-Pearsons r correlation will be used to measure the relationship of pck and the learning of students throughout the semester. 
-Teachers' PCK scores will be correlated against the improvement of SCS1 scores of the students they are teaching. Correlation will be measured per test item and overall score as well. 
-We can accept the hypothesis that the SCS1 can be used as an instrument for PCK testing if the students under higher PCK scoring teachers show larger differences in SCS1 post and pre test scores.
-Using the PCK test scores of the teachers, test items in which average scores are low will be chosen.
-The topics in which theses items belong to are identified as hard topics to teach.
- 
-#Conclusion
-Computer science education is a relatively new field of research. 
-There are so many studies in which we highlight how students learn CS and there are so many hypotheses on why they have difficulties on it.
-And while there are studies that investigate how we teach CS, our knowledge on CS teaching is thinner compared to our knowledge in CS learning. 
-Because of that, this study focuses on the measurement of PCK; it is an emerging construct introduced by Lee Shulman in the 1890's.
-PCK, the blend of pedagogy and content knowledge, is a knowledge base used by teachers to teach specific topics.
-It is a construct that is useful in investigating the unique ways in which we teach complex subjects like programming.
-While the concept of PCK is promising for CSED , data on CS teachers is hard to find.
-Teachers' PCK is an elusive concept which can take different forms making it hard to measure.
-There have been many attempts to measure PCK there are several which focus CS teachers PCK.
-But these measurement methods prove to too complicated, too abstract, or too expensive.
-Because of this, we offer a simple, quantifiable, and cheap method for PCK measurement.
-Instead of measuring PCK directly, we focus on the manifestations of PCK, specifically knowledge on student misconception or KOSM.
-We use an established and validated multiple choice exam for CS students, the SCS1 exam, and repurpose it to measure teachers' PCK.
-The methods introduced in this research can help CS instruction in many ways. 
-The measurement tool itself can be a useful evaluation tool that can encourage improvement focused teacher training.
-The tool can be used to empirically measure teaching, giving us additional insights and which teaching practices and techniques are good and which are bad.
-The measurements provided by the tool can help CS curriculum by identifying hard to teach topics.
-Using the tools and methods introduced in this research we can learn a lot more on how CS teachers teach.

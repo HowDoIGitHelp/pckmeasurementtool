@@ -1,1 +1,1 @@
-pandoc -f markdown -t latex proposal.md -o proposal.pdf --bibliography=bibliography.bib --csl=apa.csl -V margin-top=1in -V margin-bottom=1in -V margin-left=1in -V margin-right=1in
+pandoc -f markdown -t latex thesisversioning/introduction.md thesisversioning/"related work.md" thesisversioning/"research questions.md" thesisversioning/methodology.md thesisversioning/conclusion.md -o proposal.pdf --template=template.tex -H preamble.tex --bibliography=thesisversioning/references.bib --csl=apa.csl -V documentclass=report
