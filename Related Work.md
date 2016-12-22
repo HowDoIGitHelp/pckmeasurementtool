@@ -1,36 +1,4 @@
-﻿## Measuring PCK is difficult
-One of the trending fields in in science education research right now is about teacher knowledge. 
-One of the domains of teacher knowledge is the construct of teacher's pedagogical content knowledge (PCK).
-PCK is a construct introduced by the Social Science researcher Lee Shulman in the 1890's (need exact).
-Although this construct has been around for decades, the most recent breakthroughs on this field are about PCK's theoretical roots and PCK's conceptualizations. [@Park2008]
-Many researchers have discussed the complexity of PCK [@Rohaan2009,@Yadav2016 ] and because of this, there is yet to be a widely used measurement tool for it.
-Measuring a teacher's PCK directly is difficult, it is challenging to document such a broad and abstract concept.
-This is bigger problem on young research fields like Computer Science Education. 
-Because of all of this, Computer Science Education research falls behind other fields in terms of an understanding of teacher's PCK [@Yadav2016 ].
- 
-## PCK is an empirical evidence for good teaching practices
-Currently there are no widely accepted standards of teaching in Computer Science Education  [@Rohaan2009].
-This affects Computer Science teachers' personal standards of teaching. 
-When CS teachers' decide to switch between preferred teaching techniques and practices they base their choice on anecdotal evidences, informal judgement, and intuition [@Fossati2011 ].
-Measuring PCK for introductory CS teachers will allow us to compare teaching practices using empirical evidence. 
-This is important because, empirical evidence is needed so that the community can use research to answer questions on how to teach programming [@Pears2007].
- 
-## PCK measures identify difficult to teach topics
-Measuring mean PCK of teachers for each topic will give us insights on which topics are harder to teach. 
-Topics in which teachers generally have lower levels of PCK can help identify topics in which teachers have trouble teaching.
-By combining knowledge of hard to teach topics to our existing knowledge of topics CS students have trouble learning [@Goldman2008] we can verify if these two sets of topics are similar to each other.
-Knowing this will provide evidence to the hypothesis that poor performances of CS students are caused by poor teaching practices of CS teachers.
- 
-## Good measures develop good teachers
-There is demand for high quality CS teachers in the world right now. 
-This makes the need for effective teacher training imminent.
-To create frameworks of improvement - focused teacher evaluation system, measurements for effective teaching is needed [@METProject2013].
-Multiple measures are needed in order to measure the multiple facets of science education.
-And from this measures we can build a good teacher evaluation system that can be the basis on how we train our teachers.
-Data from these measurements will show which teaching practices should be improved, changed or invested on [@METProject2013 ].
-Therefore PCK measurement tools will contribute knowledge on good standards of CS teaching which will be useful for CS teacher training. 
- 
-#Related Work
+﻿#Related Work
 ## Theoretical Perspectives
 ### PCK as a knowledge base is a blend of pedagogy and content 
 Shulman (1987) described PCK as “the blending of content and pedagogy into an understanding of how particular topics, problems, or issues are organised, represented, and adapted to the diverse interests and abilities of learners, and presented for instruction” [-@Shulman1986 ]. 
@@ -44,12 +12,15 @@ This teacher knows the common questions students have about recursion, knows whi
 ### Students develop a teachers PCK
 Shulman (1987) has suggested that the development of a teacher's PCK is affected by the students that the teachers teach [-@Shulman1987]. 
 According to Shulman (1987), students affect teachers' PCK through formal and informal assessments but a more recent study has shown that there are more direct means that students impact a teacher's PCK [-@Shulman1987; @Park2008 ]. 
+ 
 One way students affect the development of PCK is through challenging questions that facilitate subject matter knowledge [@Park2008].
 Although subject matter knowledge is a separate knowledge base from PCK it has been considered one of the criterions for PCK development [@VanDriel1998].
 The teachers studied by Park and Oliver (2008) often encountered students questions which challenge their subject matter knowledge. These encounters changed the teachers subject matter knowledge so that it could be used to teach students successfully [-@Park2008].
+ 
 A second means of student impact on the development of PCK is through the assessment of student participation and responses during class.
 Student participation and response is manifested from "students' enjoyment, evidence of learning, and other nonverbal reactions to instructional strategies".
 Based on these informal responses teachers instructional strategies are replaced, modified or validated [@Park2008; @Fossati2011].
+ 
 The third means of PCK development from teacher responses is from assessing students' creative and critical ideas. 
 This simply means that that students critical inputs and ideas during class are used by the teacher to look for innovative and interesting strategies of teaching [@Park2008].
  
@@ -59,8 +30,9 @@ Knowledge on student misconceptions is transformed into the knowledge of techniq
 Park and Oliver's (2008) findings show that teachers understanding of their students' misconceptions shaped the entire teaching process "from planning to assessment" [-@Park2008]. 
 Their interviews with teachers show that expanding teacher's knowledge of student misconception ultimately improved their PCK.
 From this, Park and Oliver (2008) concluded that "as teachers developed better understanding of students' misconceptions, their PCK became more sophisticated" [-@Park2008].
-This supports Shulman's (1986) early incarnations of the PCK construct [-@Shulman1986].  
-Shulman (1986) included knowledge of student misconceptions as one of the components of PCK.  
+ 
+This supports Shulman's (1986) early incarnations of the PCK construct [-@Shulman1986].
+Shulman (1986) included knowledge of student misconceptions as one of the components of PCK.
 According to him, student preconceptions, which are often misconceptions, require teaching strategies that reorganize these into correct conceptions [@Shulman1986].
 Even non-PCK related teaching studies have suggested that teachers' knowledge of student misconceptions is crucial for effective teaching [@Ausubel1968]. 
 Some researchers even stress that KOSM is a required knowledge base for teachers who teach the topics [@Carlsen1999]. 
@@ -68,10 +40,11 @@ Some researchers even stress that KOSM is a required knowledge base for teachers
 ### Misconceptions relate PCK to Conceptual Change Theory
 One of the emerging conceptual change theory perspectives is the idea of  theory change. 
 It states that learners' conceptual frameworks are embedded intuitively and that it is different from that of an expert’s conceptual framework. 
-And that these learners' conceptual frameworks require substantial restructuring  to resemble the conceptual framework of an expert [@Carey1985].
+Therefore, these learners' conceptual frameworks require substantial restructuring  to resemble the conceptual framework of an expert [@Carey1985].
+ 
 Learner's conceptual frameworks are comparable to the preconceptions of a student before a course. 
 These preconceptions are often misconceptions that require restructuring in the form of science education [@Shulman1986]. 
-Therefore, teacher equipped with the knowledge of these misconceptions become more effective catalysts of theory change.
+Therefore, teachers equipped with the knowledge of these misconceptions become more effective catalysts of theory change.
 These teachers become better at shaping learners' conceptual frameworks (misconceptions) into  experts' conceptual frameworks (correct conceptions).
 It could be argued that the motivation for teaching learners is not the process of filling up a learners blank slate but the process of changing the wrong contents of the learners' slate into correct contents [@Sadler2013].
 Recent papers on Conceptual Change theory suggest that this theory provides a bridging gap in researches of student errors and instructional practice. Duit and Treagust (2003) discuss the possible use of conceptual change process to examine scientific literacy to provide a framework for science education and teaching [-@Duit2003].
@@ -105,8 +78,8 @@ The process for creating these test questions start with the gathering of the mo
 Questions for teachers are then created based on the common misconceptions gathered.
  
 A similar process is also used by researchers from other fields.
-A study on the influence of teacher knowledge on middle school classrooms show that the teachers who could identify popular misconceptions had much larger classroom gains compared to teachers who only knew the answer. 
-In addition to that, Sadler's (2013) research concluded that a multiple choice assessment instrument could be used to assess the SMK (subject matter knowledge) and KOSM (knowledge on student misconception) of teachers [@Sadler2013]. 
+A study on the influence of teacher knowledge on middle school classrooms show that the teachers who could identify popular misconceptions had much larger classroom gains compared to teachers who only knew the answer [@Sadler2013]. 
+In addition to that, this research concluded that a multiple choice assessment instrument could be used to assess the SMK (subject matter knowledge) and KOSM (knowledge on student misconception) of teachers. 
 While Sadler's study doesn't explicitly discuss the concept of PCK itself, several conceptual studies discussed above  show that the KOSM of students that Sadler identified are manifestations of PCK [@Park2008 ;@Shulman1986]. 
 This study, like Juttner and Neuhaus' (2010) study constructed test questions and answers which are grounded by empirical evidence.
 Although, Juttner and Neuhaus' (2009) study unlike Sadler et. al's (2013) study, focuses on the source of student misconceptions more than the validity of the constructed PCK test [@Juttner2010;@Sadler2013].
