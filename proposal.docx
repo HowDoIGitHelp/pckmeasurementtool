@@ -1,0 +1,687 @@
+\documentclass[]{report}
+\usepackage{SourceSerifPro}
+
+% Overwrite \begin{figure}[htbp] with \begin{figure}[H]
+\usepackage{float}
+\let\origfigure=\figure
+\let\endorigfigure=\endfigure
+\renewenvironment{figure}[1][]{%
+\origfigure[b]
+}{%
+\endorigfigure
+}
+
+% fix for pandoc 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% TP: hack to truncate list of figures/tables.
+\usepackage{truncate}
+\usepackage{caption}
+\usepackage{tocloft}
+% TP: end hack
+
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+
+    \setmainfont{SourceSerifPro}
+    \setsansfont{SourceSansPro}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\date{}
+\usepackage{ragged2e}
+\usepackage{biblatex}
+\addbibresource{}
+\RaggedRight
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\newcommand{\ssp}{%
+  \fontfamily{phv}\fontsize{9}{11}\selectfont}
+
+\lhead{\ssp \leftmark}
+\rhead{\ssp \thepage}
+\lfoot{\ssp \leftmark}
+\rfoot{\ssp \thepage}
+\renewcommand{\footrulewidth}{0.7pt}
+
+\begin{document}
+
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\chapter{Introduction}\label{introduction}
+
+\section{We don't know how CS teachers
+teach}\label{we-dont-know-how-cs-teachers-teach}
+
+Despite the demand for high quality educators in Computer Science almost
+nothing is known about how our teacher's teach programming. The teaching
+strategies and practices that CS teachers use are not empirically
+reviewed. Because of this, the knowledge that Computer Science teachers
+use in order to teach CS concepts remains unclear. For example, Pears
+et. al's (2007) literature review on introductory programming
+instruction failed to provide an answer on how to teach introductory CS
+due to the scarcity of systematic evidence that may support any answer
+(Pears et al., 2007). This is not surprising due to the fact that
+Computer Science Education is young compared to other scientific fields
+like Physics, Biology and Chemistry. Because Computer Science Education
+is a relatively young field, there is no benchmark on how good CS
+teachers teach Computer Science or how effective current practices are.
+
+\section{Measuring PCK is difficult}\label{measuring-pck-is-difficult}
+
+One of the trending fields in in science education research right now is
+about teacher knowledge. One of the domains of teacher knowledge is the
+construct of teacher's pedagogical content knowledge (PCK). PCK is a
+construct introduced by the Social Science researcher Lee Shulman in the
+1890's (need exact). Although this construct has been around for
+decades, the most recent breakthroughs on this field are about PCK's
+theoretical roots and PCK's conceptualizations. (Park \& Oliver, 2008)
+Many researchers have discussed the complexity of PCK (Rohaan, Taconis,
+\& Jochems, 2009,Yadav, Berges, Sands, \& Good (2016)) and because of
+this, there is yet to be a widely used measurement tool for it.
+Measuring a teacher's PCK directly is difficult, it is challenging to
+document such a broad and abstract concept. This is bigger problem on
+young research fields like Computer Science Education. Because of all of
+this, Computer Science Education research falls behind other fields in
+terms of an understanding of teacher's PCK (Yadav et al., 2016 ).
+
+\section{PCK is an empirical evidence for good teaching
+practices}\label{pck-is-an-empirical-evidence-for-good-teaching-practices}
+
+Currently there are no widely accepted standards of teaching in Computer
+Science Education (Rohaan et al., 2009). This affects Computer Science
+teachers' personal standards of teaching. When CS teachers' decide to
+switch between preferred teaching techniques and practices they base
+their choice on anecdotal evidences, informal judgement, and intuition
+(Fossati \& Guzdial, 2011 ). Measuring PCK for introductory CS teachers
+will allow us to compare teaching practices using empirical evidence.
+This is important because, empirical evidence is needed so that the
+community can use research to answer questions on how to teach
+programming (Pears et al., 2007).
+
+\section{PCK measures identify difficult to teach
+topics}\label{pck-measures-identify-difficult-to-teach-topics}
+
+Measuring mean PCK of teachers for each topic will give us insights on
+which topics are harder to teach. Topics in which teachers generally
+have lower levels of PCK can help identify topics in which teachers have
+trouble teaching. By combining knowledge of hard to teach topics to our
+existing knowledge of topics CS students have trouble learning (Goldman
+et al., 2008) we can verify if these two sets of topics are similar to
+each other. Knowing this will provide evidence to the hypothesis that
+poor performances of CS students are caused by poor teaching practices
+of CS teachers.
+
+\section{Good measures develop good
+teachers}\label{good-measures-develop-good-teachers}
+
+There is demand for high quality CS teachers in the world right now.
+This makes the need for effective teacher training imminent. To create
+frameworks of improvement - focused teacher evaluation system,
+measurements for effective teaching is needed (MET Project, 2013).
+Multiple measures are needed in order to measure the multiple facets of
+science education. And from this measures we can build a good teacher
+evaluation system that can be the basis on how we train our teachers.
+Data from these measurements will show which teaching practices should
+be improved, changed or invested on (MET Project, 2013 ). Therefore PCK
+measurement tools will contribute knowledge on good standards of CS
+teaching which will be useful for CS teacher training.
+
+\chapter{Related Work}\label{related-work}
+
+\section{Theoretical Perspectives}\label{theoretical-perspectives}
+
+\subsection{PCK as a knowledge base is a blend of pedagogy and
+content}\label{pck-as-a-knowledge-base-is-a-blend-of-pedagogy-and-content}
+
+Shulman (1987) described PCK as ``the blending of content and pedagogy
+into an understanding of how particular topics, problems, or issues are
+organised, represented, and adapted to the diverse interests and
+abilities of learners, and presented for instruction'' (1986 ). It is
+one of the 7 knowledge bases a teacher draws from when reaching. PCK is
+separate from but related to a teacher's pedagogy as well as a teacher's
+content knowledge. For example an introductory computer science teacher
+with pedagogy and content knowledge only draws from his/her general
+pedagogical techniques to teach recursive statements. This teacher knows
+the concept of recursion and this teacher also knows how to speak in
+public and knows how to make tests. On the other hand a teacher with a
+developed pedagogical content knowledge knows how to specifically teach
+recursion. This teacher knows the common questions students have about
+recursion, knows which questions to ask to effectively test students'
+knowledge in recursion and knows students' misconceptions about
+recursion.
+
+\subsection{Students develop a teachers
+PCK}\label{students-develop-a-teachers-pck}
+
+Shulman (1987) has suggested that the development of a teacher's PCK is
+affected by the students that the teachers teach (1987). According to
+Shulman (1987), students affect teachers' PCK through formal and
+informal assessments but a more recent study has shown that there are
+more direct means that students impact a teacher's PCK (Park \& Oliver,
+2008 ; 1987).
+
+One way students affect the development of PCK is through challenging
+questions that facilitate subject matter knowledge (Park \& Oliver,
+2008). Although subject matter knowledge is a separate knowledge base
+from PCK it has been considered one of the criterions for PCK
+development (Driel, Verloop, \& Vos, 1998). The teachers studied by Park
+and Oliver (2008) often encountered students questions which challenge
+their subject matter knowledge. These encounters changed the teachers
+subject matter knowledge so that it could be used to teach students
+successfully (2008).
+
+A second means of student impact on the development of PCK is through
+the assessment of student participation and responses during class.
+Student participation and response is manifested from ``students'
+enjoyment, evidence of learning, and other nonverbal reactions to
+instructional strategies''. Based on these informal responses teachers
+instructional strategies are replaced, modified or validated (Fossati \&
+Guzdial, 2011; Park \& Oliver, 2008).
+
+The third means of PCK development from teacher responses is from
+assessing students' creative and critical ideas. This simply means that
+that students critical inputs and ideas during class are used by the
+teacher to look for innovative and interesting strategies of teaching
+(Park \& Oliver, 2008).
+
+\subsection{Knowledge of students' misconceptions is a sign of a
+developed
+PCK}\label{knowledge-of-students-misconceptions-is-a-sign-of-a-developed-pck}
+
+Student misconceptions about the topic also shape the teacher's PCK.
+Knowledge on student misconceptions is transformed into the knowledge of
+techniques on how to teach the topic that addresses the misconception or
+avoids the formation of the misconception (Park \& Oliver, 2008). Park
+and Oliver's (2008) findings show that teachers understanding of their
+students' misconceptions shaped the entire teaching process ``from
+planning to assessment'' (2008). Their interviews with teachers show
+that expanding teacher's knowledge of student misconception ultimately
+improved their PCK. From this, Park and Oliver (2008) concluded that
+``as teachers developed better understanding of students'
+misconceptions, their PCK became more sophisticated'' (2008).
+
+This supports Shulman's (1986) early incarnations of the PCK construct
+(1986). Shulman (1986) included knowledge of student misconceptions as
+one of the components of PCK. According to him, student preconceptions,
+which are often misconceptions, require teaching strategies that
+reorganize these into correct conceptions (Shulman, 1986). Even non-PCK
+related teaching studies have suggested that teachers' knowledge of
+student misconceptions is crucial for effective teaching (Ausubel,
+1968). Some researchers even stress that KOSM is a required knowledge
+base for teachers who teach the topics (Carlsen, 1999).
+
+\subsection{Misconceptions relate PCK to Conceptual Change
+Theory}\label{misconceptions-relate-pck-to-conceptual-change-theory}
+
+One of the emerging conceptual change theory perspectives is the idea of
+theory change. It states that learners' conceptual frameworks are
+embedded intuitively and that it is different from that of an expert's
+conceptual framework. Therefore, these learners' conceptual frameworks
+require substantial restructuring to resemble the conceptual framework
+of an expert (Carey, 1985).
+
+Learner's conceptual frameworks are comparable to the preconceptions of
+a student before a course. These preconceptions are often misconceptions
+that require restructuring in the form of science education (Shulman,
+1986). Therefore, teachers equipped with the knowledge of these
+misconceptions become more effective catalysts of theory change. These
+teachers become better at shaping learners' conceptual frameworks
+(misconceptions) into experts' conceptual frameworks (correct
+conceptions). It could be argued that the motivation for teaching
+learners is not the process of filling up a learners blank slate but the
+process of changing the wrong contents of the learners' slate into
+correct contents (Sadler, Gerhard, Coyle, \& Nancy, 2013). Recent papers
+on Conceptual Change theory suggest that this theory provides a bridging
+gap in researches of student errors and instructional practice. Duit and
+Treagust (2003) discuss the possible use of conceptual change process to
+examine scientific literacy to provide a framework for science education
+and teaching (2003).
+
+\section{State of the Art}\label{state-of-the-art}
+
+\subsection{Measuring PCK
+qualitatively}\label{measuring-pck-qualitatively}
+
+Loughran et. al's (2001) early works in representing PCK was through
+Pedagogical and Professional - experience Repertoirs (PaP-eRs)
+(Loughran, Berry, \& Mulhall, 2012; Loughran, Milroy, Berry, Gunstone,
+\& Mulhall, 2001). This method involves documenting on paper teacher's
+practices, anecdotes and insights on a topic. Although teachers PaP-eRs
+of a topic is not a complete representation of PCK it is a useful tool
+for sharing PCK in practice. Loughran et. al (200?) later expanded the
+documentation of PCK by adding the tool Context Representations (CoRe)
+which details their overview of concepts related to the topic (Loughran
+et al., 2012).
+
+Based on Loughran et. al's (2012) CoRe's deBeer's (2009) study compiled
+a list of \emph{Big Ideas} specifically for introductory computer
+science education (2009; 2012). The Big Ideas were produced using
+semi-structured group discussions of computer science teachers. Each of
+these Big Ideas have corresponding questions that assess a teachers'
+content knowledge, teaching strategies, and other pedagogical insights
+in said topic.
+
+One of the most recent studies also use open ended questions for
+measuring PCK (Yadav et al., 2016). Yadav et al. (2016) used open-ended
+questionnaires that present common Computer Science situations that
+teachers may encounter. Although this test doesn't yield quantitative
+data, the teacher's responses generate rich qualitative data sets.
+
+\subsection{Measuring PCK
+quantitatively}\label{measuring-pck-quantitatively}
+
+Some studies used multiple choice approaches for easily quantifiable
+measurements of PCK. Although not exactly for PCK, one of the earliest
+test questionnaires to measure PCK was from Kromney and Renfrow's C-P
+items (1991 ). This study built multiple choice questions to measure
+content-specific pedagogical knowledge (Kromrey \& Renfrow, 1991).
+Rohaan et. al. (2009) a constructed multiple choice questionnaire called
+the \emph{Teaching of Technology Test} for primary technology education
+teachers (2009). Instead of using empirical data, the study used expert
+judgments to examine the contents validity.
+
+\subsection{KOSM and student learning}\label{kosm-and-student-learning}
+
+New studies on quantitative PCK measurements have focused on teacher's
+understanding of student misconceptions. Juttner and Neuhaus (2010)
+created PCK questions based on empirically analysed student errors to be
+used for a PCK test for biology teachers (Jüttner \& Neuhaus, 2010).\\
+The process for creating these test questions start with the gathering
+of the most common student misconceptions using a multiple-choice test
+for students. Questions for teachers are then created based on the
+common misconceptions gathered.
+
+A similar process is also used by researchers from other fields. A study
+on the influence of teacher knowledge on middle school classrooms show
+that the teachers who could identify popular misconceptions had much
+larger classroom gains compared to teachers who only knew the answer
+(Sadler et al., 2013). In addition to that, this research concluded that
+a multiple choice assessment instrument could be used to assess the SMK
+(subject matter knowledge) and KOSM (knowledge on student misconception)
+of teachers. While Sadler's study doesn't explicitly discuss the concept
+of PCK itself, several conceptual studies discussed above show that the
+KOSM of students that Sadler identified are manifestations of PCK (Park
+\& Oliver, 2008 ; Shulman, 1986). This study, like Juttner and Neuhaus'
+(2010) study constructed test questions and answers which are grounded
+by empirical evidence. Although, Juttner and Neuhaus' (2009) study
+unlike Sadler et. al's (2013) study, focuses on the source of student
+misconceptions more than the validity of the constructed PCK test
+(Jüttner \& Neuhaus, 2010; Sadler et al., 2013).
+
+On the field of Computer Science Education, some studies are also
+starting to consider misconceptions in PCK. Ohrndorf and Schubert (2013)
+created some test items to be used to assess student teacher's PCK. The
+test items created in this study are based on three measurable aspects
+of PCK: PCK test, PCK student, and PCK instruction. PCK student test
+items are questions on student's misconceptions and PCK instructions are
+questions on how to create instructions for solving misconceptions
+(Ohrndorf \& Schubert, 2013). One of main differences of Ohrndorf and
+Schubert's (2013) study to Sadler et. al's study and Juttner and
+Neuhaus' (2010) study is that the formermost study created a test which
+yields qualitative data.
+
+\section{Gaps in Knowledge}\label{gaps-in-knowledge}
+
+\subsection{Our current PCK tools are hard to
+build}\label{our-current-pck-tools-are-hard-to-build}
+
+Most PCK representation and measurement techniques involve verbalizing
+teaching practices or observing classroom management by teachers which
+easily highlight PCK in action (Beer, 2009; Loughran et al., 2012, 2001;
+Ohrndorf \& Schubert, 2013; Rohaan et al., 2009; Yadav et al., 2016).
+But the problem is that these methods yield data which are too abstract
+or too difficult to quantitatively measure. Teachers may have
+difficulties in converting their own techniques into words introducing
+more variables and more complications in gathering the data. Also,
+current measurement tools (both qualitative and quantitative) are
+complicated to create from scratch. These tools and tests are derived
+from meetings and discussions by teachers or experts in the field (Beer,
+2009; Loughran et al., 2012, 2001; Rohaan et al., 2009; Yadav et al.,
+2016) which require more planning than other knowledge bases like
+content knowledge (Kromrey \& Renfrow, 1991). This is especially
+difficult since teacher's PCK is unique for each content. It will be
+very expensive and time consuming if we were to attempt building PCK
+tests for multiple topics using these methods.
+
+\subsection{PCK specific to CS
+education}\label{pck-specific-to-cs-education}
+
+Currently there are studies that show that effective middle school
+teachers are aware of the common misconceptions on the field they are
+teaching (Sadler et al., 2013 ) but there are no studies in CS right now
+that demonstrate this correlation. It has been shown that a
+multiple-choice questionnaire for students can be used as a KOSM
+(knowledge on student misconceptions) test for teachers. This was
+performed on middle school classes. Whether or not this is true on CS1
+classes is not known as of the moment.
+
+\subsection{The set of topics which are difficult to
+teach}\label{the-set-of-topics-which-are-difficult-to-teach}
+
+While there are studies that show which concepts CS students are having
+a difficulty on learning, there are no studies that identify which
+concepts CS teachers have difficulty in teaching (Goldman et al., 2008).
+Measuring the mean PCK of teachers around the world for each topic will
+reveal the topics that teachers have low PCK on. (help bad sentence)
+These topics will reveal insights on hard to teach concepts. This set of
+topics is important to find since the intersection between the set of
+hard to teach topics and the set of hard to learn topics will be provide
+evidence that CS students cant learn because CS teachers cant teach.
+
+\chapter{Research questions}\label{research-questions}
+
+Because of these gaps in knowledge we aim to answer these questions:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\emph{Can the SCS1 test be repurposed into a PCK test?}}
+\end{itemize}
+
+It has been shown in a previous study that a validated multiple choice
+tests for middle school students can be used to calculate teacher's
+knowledge on student misconceptions (Sadler et al., 2013 ). The SCS1 is
+proven to be a usable PCK tool if we find positive correlation between
+student gains and PCK tool test.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\emph{How does CS teachers' PCK relate to students'
+  learning?}}
+\end{itemize}
+
+Using the tool derived from SCS1 we will be able to measure the
+relationship between CS teachers PCK and student learning gains. The
+same tool can also be used to measure the following PCK related
+knowledge bases.
+
+\begin{itemize}
+\item
+  \emph{How does CS teachers' content knowledge score relate to
+  students' learning?}
+\item
+  \emph{How does CS teachers' ability to identify misconceptions relate
+  to students' learning?}
+\end{itemize}
+
+These specific research questions are asked so that we can measure how
+these knowledge bases relate to each other and also which of them matter
+the most.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\emph{Which introductory programming concepts are hard to
+  teach?}}
+\end{itemize}
+
+The tool can be used to measure the average PCK of teachers for each
+item in the repurposed SCS1 test. Test items in which teachers generally
+score low PCK can provide insight on which introductory computer science
+topics are hard to teach.
+
+\chapter{Methodology}\label{methodology}
+
+\section{Research Method}\label{research-method}
+
+It is much harder to measure each aspect of teacher competency to
+control the independent variable. Therefore the study cannot measure
+causal relationships. Also it is unethical to deliberately subject the
+students to incompetent teachers. According to Cohen et. al. (2007) the
+type of research most suitable is \emph{ex post facto research} under a
+co-relational design (2007). \emph{Ex post facto} research method is
+used if the researchers are unable to conduct a controlled experiment.
+Instead of meticulously controlling and manipulating every variable
+before conducting the experiment, \emph{ex post facto} research only
+requires data collection and data analysis to test the hypothesis. A
+co-relational design of \emph{ex post facto} research is the research
+design used when the researchers cannot collect data for all variables.
+This design cannot test causal relationships but can prove correlation
+relationships.
+
+\section{Data Collection}\label{data-collection}
+
+To measure student learning a validated introductory CS test will be
+used. The students will take pre-tests and post-tests to measure the
+improvement in scores. At the early part of the semester x CS2 classes
+will take the SCS1 exam as a pre test. To generate the pck test, each
+test question in the SCS1 exam will be converted to a pck test question
+that would let the teacher identify from the SCS1 choices which are the
+most common misconceptions. An SCS1 post test will be administered
+towards the end of the semester and the improvement of scores from the
+post test will be measured.
+
+\section{Analysis}\label{analysis}
+
+There are two available student test data after the pre test. One is
+from the pre-tests administered on the students teached by the teachers
+taking the PCK tests and another data available is from SCS1 pre tests
+taken by CS1 students from around the world. Because of the possibility
+that these two groups of data will show different frequencies of common
+misconceptions, teachers' answers will be marked based on the two groups
+of student test data. Pearsons r correlation will be used to measure the
+relationship of pck and the learning of students throughout the
+semester. Teachers' PCK scores will be correlated against the
+improvement of SCS1 scores of the students they are teaching.
+Correlation will be measured per test item and overall score as well. We
+can accept the hypothesis that the SCS1 can be used as an instrument for
+PCK testing if the students under higher PCK scoring teachers show
+larger differences in SCS1 post and pre test scores. Using the PCK test
+scores of the teachers, test items in which average scores are low will
+be chosen. The topics in which theses items belong to are identified as
+hard topics to teach.
+
+\chapter{Conclusion}\label{conclusion}
+
+Computer science education is a relatively new field of research. There
+are so many studies in which we highlight how students learn CS and
+there are so many hypotheses on why they have difficulties on it. And
+while there are studies that investigate how we teach CS, our knowledge
+on CS teaching is thinner compared to our knowledge in CS learning.
+Because of that, this study focuses on the measurement of PCK; it is an
+emerging construct introduced by Lee Shulman in the 1890's.
+
+PCK, the blend of pedagogy and content knowledge, is a knowledge base
+used by teachers to teach specific topics. It is a construct that is
+useful in investigating the unique ways in which we teach complex
+subjects like programming. While the concept of PCK is promising for
+CSED , data on CS teachers is hard to find. Teachers' PCK is a highly
+complex concept which can take different forms making it hard to
+measure. There have been many attempts to measure PCK there are several
+which focus CS teachers PCK. But these measurement methods prove to too
+complicated, too abstract, or too expensive. Because of this, we offer a
+simple, quantifiable, and cheap method for PCK measurement. Instead of
+measuring PCK directly, we focus on the manifestations of PCK,
+specifically knowledge on student misconception or KOSM. We use an
+established and validated multiple choice exam for CS students, the SCS1
+exam, and repurpose it to measure teachers' PCK.
+
+The methods introduced in this research can help CS instruction in many
+ways. The measurement tool itself can be a useful evaluation tool that
+can encourage improvement focused teacher training. The tool can be used
+to empirically measure teaching, giving us additional insights and which
+teaching practices and techniques are good and which are bad. The
+measurements provided by the tool can help CS curriculum by identifying
+hard to teach topics. Using the tools and methods introduced in this
+research we can learn a lot more on how CS teachers teach.
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\hypertarget{refs}{}
+\hypertarget{ref-Ausubel1968}{}
+Ausubel, D. P. (1968). \emph{Educational Psychology: A Cognitive View}
+(p. 685). \url{http://doi.org/10.1107/S010827019000508X}
+
+\hypertarget{ref-DeBeer2009}{}
+Beer, H. de. (2009). The Characteristics of Pedagogical Content
+Knowledge of Teachers Teaching an Introductory Programming Course.
+
+\hypertarget{ref-Carey1985}{}
+Carey, S. (1985). \emph{Conceptual change in childhood} (p. 240).
+\url{http://doi.org/10.1016/S0016-6995(85)80176-5}
+
+\hypertarget{ref-Carlsen1999}{}
+Carlsen, W. S. (1999). Domains of teacher knowledge. \emph{Examining
+Pedagogical Content Knowledge}, 133--144.
+\url{http://doi.org/10.1007/0-306-47217-1_5}
+
+\hypertarget{ref-Cohen2007}{}
+Cohen, L., Manion, L., \& Morrison, K. (2007). Ex Post Facto Research.
+In \emph{Research methods in education} (6th ed., pp. 264--271). New
+York: Taylor \& Francis.
+
+\hypertarget{ref-VanDriel1998}{}
+Driel, J. H. van, Verloop, N., \& Vos, W. de. (1998). Developing Science
+Teachers' Pedagogical Content Knowledge. \emph{Journal of Research in
+Science Teaching}, \emph{35}(6), 673.
+\href{http://doi.org/10.1002/(SICI)1098-2736(199808)35:6\%3C673::AID-TEA5\%3E3.0.CO;2-J}{http://doi.org/10.1002/(SICI)1098-2736(199808)35:6\textless{}673::AID-TEA5\textgreater{}3.0.CO;2-J}
+
+\hypertarget{ref-Duit2003}{}
+Duit, R., \& Treagust, D. F. (2003). Conceptual change: A powerful
+framework for improving science teaching and learning.
+\emph{International Journal of Science Education}, \emph{25}(February
+2015), 671--688. \url{http://doi.org/10.1080/09500690305016}
+
+\hypertarget{ref-Fossati2011}{}
+Fossati, D., \& Guzdial, M. (2011). The Use of Evidence in the Change
+Making Process of Computer Science Educators. \emph{Special Interest
+Group on Computer Science Education (SIGCSE) Conference}, 685--690.
+\url{http://doi.org/10.1145/1953163.1953352}
+
+\hypertarget{ref-Goldman2008}{}
+Goldman, K., Gross, P., Heeren, C., Herman, G., Kaczmarczyk, L., Loui,
+M. C., \& Zilles, C. (2008). Identifying important and difficult
+concepts in introductory computing courses using a delphi process.
+\emph{ACM SIGCSE Bulletin}, \emph{40}(1), 256.
+\url{http://doi.org/10.1145/1352322.1352226}
+
+\hypertarget{ref-Juttner2010}{}
+Jüttner, M., \& Neuhaus, B. J. (2010). Using empirically analyzed
+pupils' errors to develop a PCK test. In \emph{Contemporary science
+education research: Preservice and inservice teacher education. a
+collection of papers presented at esera 2009 conference} (pp. 331--340).
+Retrieved from
+\href{https://www.esera.org/media/conferences/Book2.pdf\%7B/\#\%7Dpage=345}{https://www.esera.org/media/conferences/Book2.pdf\{\textbackslash{}\#\}page=345}
+
+\hypertarget{ref-Kromrey1991}{}
+Kromrey, J. D. ., \& Renfrow, D. D. (1991). Using multiple-choice
+examination items to measure teachers ' content-specific pedagogical
+knowledge. \emph{Eastern Educational Research Association}, 1--20.
+
+\hypertarget{ref-Loughran2012}{}
+Loughran, J., Berry, A., \& Mulhall, P. (2012). \emph{Understanding and
+Developing Science Teachers' Pedagogical Content Knowledge} (p. 34).
+\url{http://doi.org/10.1007/978-94-6091-821-6}
+
+\hypertarget{ref-Loughran2001}{}
+Loughran, J., Milroy, P., Berry, A., Gunstone, R., \& Mulhall, P.
+(2001). Documenting Science Teachers Pedagogical content knowledge
+through Pap-eRs. \emph{Research in Science Edition}, \emph{31}(2),
+289--307. \url{http://doi.org/10.1023/A:1013124409567}
+
+\hypertarget{ref-METProject2013}{}
+MET Project. (2013). Feedback for Better Teaching, 12. Retrieved from
+\href{http://www.metproject.org/downloads/MET\%7B/_\%7DFeedback\%20for\%20Better\%20Teaching\%7B/_\%7DPrinciples\%20Paper.pdf}{http://www.metproject.org/downloads/MET\{\textbackslash{}\_\}Feedback for Better Teaching\{\textbackslash{}\_\}Principles Paper.pdf}
+
+\hypertarget{ref-Ohrndorf2013}{}
+Ohrndorf, L., \& Schubert, S. (2013). Measurement of pedagogical content
+knowledge. In \emph{Proceedings of the 8th workshop in primary and
+secondary computing education on - wipse '13} (pp. 104--107). New York,
+NY, USA: ACM. \url{http://doi.org/10.1145/2532748.2532758}
+
+\hypertarget{ref-Park2008}{}
+Park, S., \& Oliver, J. S. (2008). Revisiting the conceptualisation of
+pedagogical content knowledge (PCK): PCK as a conceptual tool to
+understand teachers as professionals. \emph{Research in Science
+Education}, \emph{38}(3), 261--284.
+\url{http://doi.org/10.1007/s11165-007-9049-6}
+
+\hypertarget{ref-Pears2007}{}
+Pears, a, Seidman, S., Malmi, L., Mannila, L., Adams, E., Bennedsen, J.,
+\ldots{} Paterson, J. (2007). A survey of literature on the teaching of
+introductory programming. \emph{SIGCSE Bulletin}, \emph{39}(4),
+204--223. \url{http://doi.org/10.1080/08993400500150747}
+
+\hypertarget{ref-Rohaan2009}{}
+Rohaan, E. J., Taconis, R., \& Jochems, W. M. G. (2009). Measuring
+teachers' pedagogical content knowledge in primary technology education.
+\emph{Research in Science \& Technological Education}, \emph{27}(3),
+327--338. \url{http://doi.org/10.1080/02635140903162652}
+
+\hypertarget{ref-Sadler2013}{}
+Sadler, P., Gerhard, S., Coyle, H., \& Nancy, C.-S. (2013). The
+Influence of Teachers' Knowledge on Student Learning in Middle School
+Physical Science Classrooms. \emph{AMERICAN EDUCATIONAL RESEARCH
+JOURNAL}, \emph{50}(5), 1020--1049.
+\url{http://doi.org/10.3102/0002831213477680}
+
+\hypertarget{ref-Shulman1986}{}
+Shulman, L. S. (1986). Those who understand: knowdge growth in teaching.
+\emph{Educational Researcher}, \emph{15}(2), 4--14.
+
+\hypertarget{ref-Shulman1987}{}
+Shulman, L. S. (1987). Knowledge and Teaching: Foundations of the New
+Reform. \emph{Harvard Educational Review}, \emph{57}(1), 1--22.
+\url{http://doi.org/10.1007/SpringerReference_17273}
+
+\hypertarget{ref-Yadav2016}{}
+Yadav, A., Berges, M., Sands, P., \& Good, J. (2016). Measuring computer
+science pedagogical content knowledge. \emph{Proceedings of the 11th
+Workshop in Primary and Secondary Computing Education on ZZZ - WiPSCE
+'16}, (October), 92--95. \url{http://doi.org/10.1145/2978249.2978264}
+
+
+\printbibliography
+
+\end{document}
