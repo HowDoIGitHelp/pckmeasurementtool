@@ -4,9 +4,9 @@
  
 # Latex packages
 Im not sure about this but I think you need to install these packages to your latex engine. 
-If youre using miktex you can use the *MiktexPackage Installer* which is installed once you install miktex (for different engines there is also a package installer ussualy)
+If youre using miktex you can use the *MiktexPackage Installer* which is installed once you install miktex (for different engines there is also a package installer usualy)
  - *ragged2e* for hyphenated left align
- - *sourceserifpro*, *sourcesanspro*, *sourcecodepro* for adobe x pro fonts
+ - *sourceserifpro*, *sourcesanspro*, and *sourcecodepro* for adobe x pro fonts
  
 # Usage
 Just replace the markdown files on input/ with your own. 
@@ -26,3 +26,4 @@ plaintexts/references.md -o proposal.pdf --template=styles/template.tex
  - Make sure you put hard linebreaks on your markdown for every new paragraph. 
  - Pandoc doesn't work if your md is ANSI just set it to UTF-8.
  - I will update this once i integrate the abstract.
+ - The template.tex was adapted form [tompollard's phd_thesis_markdown](https://github.com/tompollard/phd_thesis_markdown)
