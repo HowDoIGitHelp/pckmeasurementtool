@@ -165,6 +165,8 @@ $header-includes$
 $endfor$
 \usepackage{ragged2e}
 \usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage{pdflscape}
 \addbibresource{$biblio-files$}
 \RaggedRight
 
@@ -181,7 +183,8 @@ $endfor$
 \rfoot{\ssp \thepage}
 \renewcommand{\footrulewidth}{0.7pt}
 
-
+\usepackage{rotating}
+\usepackage{longtable,booktabs}
 
 \begin{document}
 $if(title)$
@@ -220,4 +223,6 @@ $for(include-after)$
 $include-after$
 
 $endfor$
+
+
 \end{document}

@@ -14,12 +14,11 @@ Just replace the markdown files on plaintexts/ with your own.
 If you put all parts of the proposal in one markdown its okay just replace the filename. 
 And then run this on a terminal:
 ```
-pandoc -f markdown -t latex plaintexts/abstract.md plaintexts/introduction.md 
-plaintexts/"related work.md" plaintexts/"research questions.md" 
-plaintexts/methodology.md plaintexts/conclusion.md plaintexts/references.md 
--o proposal.pdf --template=styles/template.tex 
---bibliography=plaintexts/references.bib --csl=styles/apa.csl 
--V documentclass=report -V mainfont=SourceSerifPro -V sansfont=SourceSansPro -V fontfamily=SourceSerifPro --toc
+pandoc -f markdown -t latex plaintexts/abstract.md plaintexts/introduction.md plaintexts/"related work.md" 
+plaintexts/"research questions.md" plaintexts/methodology.md plaintexts/conclusion.md plaintexts/references.md 
+-o proposal.pdf --template=styles/template.tex --bibliography=plaintexts/references.bib --csl=styles/apa.csl 
+-V documentclass=report -V mainfont=SourceSerifPro -V sansfont=SourceSansPro -V fontfamily=SourceSerifPro 
+--toc -A appendix.tex
 ```
  
 #Notes
@@ -28,4 +27,5 @@ plaintexts/methodology.md plaintexts/conclusion.md plaintexts/references.md
  - references.md is just there to create the section heading
  - if you are just using one file for all just add an new heading "#References"
  - in your '#Abstract' section header, change it to '#Abstract {.unnumbered} so that walay chapter number
+ - to add appendix, create an appendix.tex using pandoc. Remove the preamble in appendix.tex and add all used packages in template.latex. If you dont do this the appendix will be read in verbatim
  - The template.tex was adapted form [tompollard's phd_thesis_markdown](https://github.com/tompollard/phd_thesis_markdown)
