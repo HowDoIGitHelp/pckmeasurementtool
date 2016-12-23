@@ -10,7 +10,7 @@ If youre using miktex you can use the *MiktexPackage Installer* which is install
 If you cant find the packages they might be preinstalled already so just leave it be.
  
 # Usage
-Just replace the markdown files on input/ with your own. 
+Just replace the markdown files on plaintexts/ with your own. 
 If you put all parts of the proposal in one markdown its okay just replace the filename. 
 And then run this on a terminal:
 ```
