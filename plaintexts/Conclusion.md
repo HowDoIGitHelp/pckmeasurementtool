@@ -1,22 +1,24 @@
-﻿#Conclusion
-Computer science education is a relatively new field of research. 
-There are so many studies in which we highlight how students learn CS and there are so many hypotheses on why they have difficulties on it.
-And while there are studies that investigate how we teach CS, our knowledge on CS teaching is thinner compared to our knowledge in CS learning. 
-Because of that, this study focuses on the measurement of PCK; it is an emerging construct introduced by Lee Shulman in the 1890's.
- 
-PCK, the blend of pedagogy and content knowledge, is a knowledge base used by teachers to teach specific topics.
-It is a construct that is useful in investigating the unique ways in which we teach complex subjects like programming.
-While the concept of PCK is promising for CSED , data on CS teachers is hard to find.
-Teachers' PCK is a highly complex concept which can take different forms making it hard to measure.
-There have been many attempts to measure PCK there are several which focus CS teachers PCK.
-But these measurement methods prove to too complicated, too abstract, or too expensive.
-Because of this, we offer a simple, quantifiable, and cheap method for PCK measurement.
-Instead of measuring PCK directly, we focus on the manifestations of PCK, specifically knowledge on student misconception or KOSM.
-We use an established and validated multiple choice exam for CS students, the SCS1 exam, and repurpose it to measure teachers' PCK.
- 
-The methods introduced in this research can help CS instruction in many ways. 
-The measurement tool itself can be a useful evaluation tool that can encourage improvement focused teacher training.
-The tool can be used to empirically measure teaching, giving us additional insights and which teaching practices and techniques are good and which are bad.
-The measurements provided by the tool can help CS curriculum by identifying hard to teach topics.
-Using the tools and methods introduced in this research we can learn a lot more on how CS teachers teach.
- 
+# Conclusion
+The advent of big data and machine learning has contributed to the growth of many fields.
+In the case of this study, machine learning was used in the field of genomics and bioinformatics, particularly on the concept of the minimum set of genes.
+In this study multiple machine learning algorithms (Naive Bayes, Random Forest, Artifical Neural Network) were used to model the relationship between bacterial validity and genes.
+Training using data from COG annotated gene sequences, the models were able to classify the validity of a given bacterium based only on its genes.
+Each of the models were able to model the relationships with relatively high performance (Naive Bayes f1_score=0.80; Random Forest Classifier f1_score=0.78; Artificial Neural Network f1_score=0.87) but the main focus of the study was each of the model's representation of the minimum set of genes.
+In the representation aspect, each of the model's show show its own respective advantages and disadvantages.
+The Random Forest Classifier was able to show complex conditional relationships of genes with each other but this models feature's cannot be represented as a set of genes.
+It was the Naive Bayes Classifier which was able to represent its features as coefficient of likelihoods that correspond to each gene's likelihood of being an element of the minimum set of genes.
+The Neural Network Classifier, despite showing the best results in terms of performance score, showed poor results in its representation on the minimum set of genes, when compared to the CEG database.
+The Naive Bayes Classifier was able to show that the minimum set of genes may be a small subset of the total set of essential genes.
+This study also considers the possibility that the minimum set of genes cannot be modeled using the data used in this study.
+But this possibility is unlikely since the naive bayes classifier was able to show good performance in identifying non-essential genes.
+
+As a recommendation, future studies could focus on selecting more robust methods in extracting feature importance.
+This especially applies to the extraction of feature importance in a neural network model.
+At the time of writing this paper, there is still no widespread consensus as to which feature extraction method is best in neural network models.
+In the future when there is one, the study of minimum set of genes will surely benefit from it.
+It is also advisable for future studies to include other families of classifiers like SVM, KNN or maybe unsupervised algorithms like K means clustering.
+
+In conclusion, the study shows that there is good promise in the application of machine learning in the study of the minimum set of genes.
+The study on the minimum set of genes has been an open problem ever since the dawn of the field genomics.
+This study is the first of kind in the sense that this was the first attempt in applying machine learning algorithms to model the minimum set of genes.
+Research on the field of bio-informatics and machine learning are still emerging, in the future when data is more abundant and tools are more advanced, this study would be a good framework for more large-scale and in depth studies.

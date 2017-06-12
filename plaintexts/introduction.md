@@ -1,41 +1,33 @@
-﻿#Introduction
-## We don't know how CS teachers teach
-Despite the demand for high quality educators in Computer Science almost nothing is known about how our teacher's teach programming.
-The teaching strategies and practices that CS teachers use are not empirically reviewed.
-Because of this, the knowledge that Computer Science teachers use in order to teach CS concepts remains unclear.
-For example, Pears et. al's (2007) literature review on introductory programming instruction failed to provide an answer on how to teach introductory CS due to the scarcity of systematic evidence that may support any answer [@Pears2007].
-This is not surprising due to the fact that Computer Science Education is young compared to other scientific fields like Physics, Biology and Chemistry.
-Because Computer Science Education is a relatively young field, there is no benchmark on how good CS teachers teach Computer Science or how effective current practices are.
- 
-## Measuring PCK is difficult
-One of the trending fields in in science education research right now is about teacher knowledge. 
-One of the domains of teacher knowledge is the construct of teacher's pedagogical content knowledge (PCK).
-PCK is a construct introduced by the Social Science researcher Lee Shulman in the 1890's (need exact).
-Although this construct has been around for decades, the most recent breakthroughs on this field are about PCK's theoretical roots and PCK's conceptualizations. [@Park2008]
-Many researchers have discussed the complexity of PCK [@Rohaan2009,@Yadav2016 ] and because of this, there is yet to be a widely used measurement tool for it.
-Measuring a teacher's PCK directly is difficult, it is challenging to document such a broad and abstract concept.
-This is bigger problem on young research fields like Computer Science Education. 
-Because of all of this, Computer Science Education research falls behind other fields in terms of an understanding of teacher's PCK [@Yadav2016 ].
- 
-## PCK is an empirical evidence for good teaching practices
-Currently there are no widely accepted standards of teaching in Computer Science Education  [@Rohaan2009].
-This affects Computer Science teachers' personal standards of teaching. 
-When CS teachers' decide to switch between preferred teaching techniques and practices they base their choice on anecdotal evidences, informal judgement, and intuition [@Fossati2011 ].
-Measuring PCK for introductory CS teachers will allow us to compare teaching practices using empirical evidence. 
-This is important because, empirical evidence is needed so that the community can use research to answer questions on how to teach programming [@Pears2007].
- 
-## PCK measures identify difficult to teach topics
-Measuring mean PCK of teachers for each topic will give us insights on which topics are harder to teach. 
-Topics in which teachers generally have lower levels of PCK can help identify topics in which teachers have trouble teaching.
-By combining knowledge of hard to teach topics to our existing knowledge of topics CS students have trouble learning [@Goldman2008] we can verify if these two sets of topics are similar to each other.
-Knowing this will provide evidence to the hypothesis that poor performances of CS students are caused by poor teaching practices of CS teachers.
- 
-## Good measures develop good teachers
-There is demand for high quality CS teachers in the world right now. 
-This makes the need for effective teacher training imminent.
-To create frameworks of improvement - focused teacher evaluation system, measurements for effective teaching is needed [@METProject2013].
-Multiple measures are needed in order to measure the multiple facets of science education.
-And from this measures we can build a good teacher evaluation system that can be the basis on how we train our teachers.
-Data from these measurements will show which teaching practices should be improved, changed or invested on [@METProject2013 ].
-Therefore PCK measurement tools will contribute knowledge on good standards of CS teaching which will be useful for CS teacher training. 
- 
+# Introduction
+## The field of genomics
+It was 22 years ago, back in 1995 when the first free living genome was sequenced [@Fleischmann1995].  
+It was the genome of the bacterium *H. influenzae*, containing 1,830,137 base pairs.
+Only eight years after the publishing of *H. influenzae* genome, in 2002, the Human Genome Project was completed [@Tripp2011].
+Started back in 1990, the project was a true scientific marvel, a product of contributions from multiple universities and laboratories around the world.
+The project involved a tedious process of experimentally obtaining segments of DNA and a more tedious process of reassembling the segments.
+After the 12 year long ordeal, the whole project completely sequenced the 3.3 billion base pair long human genome.
+The Human Genome Project inspired the emergence of research about genomes and sequencing tools and processes.
+The project also inspired the emergence of many genomics related researches in the field of bioinformatics, like sequence analysis, genome annotation and sequence databases.
+
+## There is an abundance of genomic data
+Now in 2017, the field genomics is on the background of the big data and machine learning age.  
+The emergence of big data and the advancements in bio-informatics brought upon the abundance of high quality genetic data [@Thanassi2002; @Mushegian1996; @VanTonder2014].
+This is facilitated by public databases like GenBank, the Sequence Read Archive and European Nucleotide Archive (ENA) [@Leinonen2011; @Benson2000a; @Leinonen2011a].
+These databases store sequences derived from innovations from next generation sequencing.
+Next generation sequencing is a group of modern genome sequencing technologies that are reportedly powerful enough to sequence the whole human genome in a single day [@Behjati2013].
+Computationally powerful machines combined with computationally power techniques like this, give the field of genomics better tools as it revisits some of biology's difficult questions.
+
+## The importance of solving the following research questions
+### The fewest parts  to construct a cell.
+There have been many attempts to answer this question through theory and small scale experimentation [@Glass2006].
+Finding the minimal gene set (i.e smallest set of genes that can support life) can provide basis for synthetic biology [@Lluch-Senar2015].
+Synthetic biology is an emerging interdisciplinary field of biology and engineering.
+This field studies on the synthesis and application of artificial biological systems.
+Although there are many attempts in creating artificial life that are relatively successful, none of these attempts have gone as close as creating free living cells [@Ferber2004].
+By finding the minimal set of genes that can support life the current understanding of simple biological systems will improve making the road to the first free living artificial life one step closer.
+
+### Effective ways to kill cells
+By determining the minimal set of bacterial genes, it will be easier to differentiate essential and non-essential genes.
+This will give antibiotics better techniques in killing pathogenic bacteria by disabling essential genes [@Akerley1998].
+Gene targeting with the knowledge of gene essentiality can be a very effective means of killing pathogenic bacteria [@Zhang2009].
+Knowledge of gene essentiality will provide pharmaceutical research advanced antibiotic techiniques like general bacteria killers and species specific bacteria killers.
